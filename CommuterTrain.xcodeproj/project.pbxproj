@@ -16,6 +16,11 @@
 		EAB578272AD7D43A000D30AD /* CommuterTrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578262AD7D43A000D30AD /* CommuterTrainTests.swift */; };
 		EAB578312AD7D43A000D30AD /* CommuterTrainUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578302AD7D43A000D30AD /* CommuterTrainUITests.swift */; };
 		EAB578332AD7D43A000D30AD /* CommuterTrainUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578322AD7D43A000D30AD /* CommuterTrainUITestsLaunchTests.swift */; };
+		EAB578402AD7D62D000D30AD /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5783F2AD7D62D000D30AD /* MainContentView.swift */; };
+		EAB578422AD7D8B5000D30AD /* TrainPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578412AD7D8B5000D30AD /* TrainPositionView.swift */; };
+		EAB578442AD7D91E000D30AD /* TrainScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578432AD7D91E000D30AD /* TrainScheduleView.swift */; };
+		EAB578462AD7D953000D30AD /* FeeCalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578452AD7D953000D30AD /* FeeCalculatorView.swift */; };
+		EAB578482AD7DA48000D30AD /* RouteInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578472AD7DA48000D30AD /* RouteInformationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		EAB5782C2AD7D43A000D30AD /* CommuterTrainUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CommuterTrainUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB578302AD7D43A000D30AD /* CommuterTrainUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuterTrainUITests.swift; sourceTree = "<group>"; };
 		EAB578322AD7D43A000D30AD /* CommuterTrainUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuterTrainUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EAB5783F2AD7D62D000D30AD /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		EAB578412AD7D8B5000D30AD /* TrainPositionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainPositionView.swift; sourceTree = "<group>"; };
+		EAB578432AD7D91E000D30AD /* TrainScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainScheduleView.swift; sourceTree = "<group>"; };
+		EAB578452AD7D953000D30AD /* FeeCalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeCalculatorView.swift; sourceTree = "<group>"; };
+		EAB578472AD7DA48000D30AD /* RouteInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteInformationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,11 @@
 				EAB5781A2AD7D439000D30AD /* CommuterTrain.entitlements */,
 				EAB578132AD7D436000D30AD /* CommuterTrain.xcdatamodeld */,
 				EAB5781B2AD7D439000D30AD /* Preview Content */,
+				EAB5783F2AD7D62D000D30AD /* MainContentView.swift */,
+				EAB578412AD7D8B5000D30AD /* TrainPositionView.swift */,
+				EAB578432AD7D91E000D30AD /* TrainScheduleView.swift */,
+				EAB578452AD7D953000D30AD /* FeeCalculatorView.swift */,
+				EAB578472AD7DA48000D30AD /* RouteInformationView.swift */,
 			);
 			path = CommuterTrain;
 			sourceTree = "<group>";
@@ -268,7 +283,12 @@
 				EAB578102AD7D436000D30AD /* CommuterTrainApp.swift in Sources */,
 				EAB578152AD7D436000D30AD /* CommuterTrain.xcdatamodeld in Sources */,
 				EAB578172AD7D436000D30AD /* ContentView.swift in Sources */,
+				EAB578482AD7DA48000D30AD /* RouteInformationView.swift in Sources */,
 				EAB578122AD7D436000D30AD /* Persistence.swift in Sources */,
+				EAB578442AD7D91E000D30AD /* TrainScheduleView.swift in Sources */,
+				EAB578422AD7D8B5000D30AD /* TrainPositionView.swift in Sources */,
+				EAB578402AD7D62D000D30AD /* MainContentView.swift in Sources */,
+				EAB578462AD7D953000D30AD /* FeeCalculatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +447,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Commuter Train";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -465,6 +486,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Commuter Train";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
