@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct CommuterTrainApp: App {
     let persistenceController = PersistenceController.shared
+    
+    static let accentColor: Color = .orange
 
     var body: some Scene {
         WindowGroup {
             MainContentView()
-                .accentColor(.orange)
+                .accentColor(CommuterTrainApp.accentColor)
         }
     }
 }
