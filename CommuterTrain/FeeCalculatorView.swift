@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct FeeCalculatorView: View {
+    
     var body: some View {
-        NavigationStack {
-            List {
-                
+        StationPickerView(
+            stationsViewModel: StationsViewModel.shared,
+            title: "Tariff Calculator") { stationName in
+                Text(stationName)
             }
-            .navigationTitle("Tariff Calculator")
-        }
     }
+    
 }
 
 struct FeeCalculationView_Previews: PreviewProvider {

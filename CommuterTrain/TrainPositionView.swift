@@ -11,7 +11,7 @@ struct TrainPositionView: View {
     
     var body: some View {
         StationPickerView(
-            stationsViewModel: StationsViewModel(),
+            stationsViewModel: StationsViewModel.shared,
             title: "Train Position"
         ) { stationName in
             Text(stationName)

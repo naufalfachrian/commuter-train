@@ -11,7 +11,7 @@ struct TrainScheduleView: View {
     
     var body: some View {
         StationPickerView(
-            stationsViewModel: StationsViewModel(),
+            stationsViewModel: StationsViewModel.shared,
             title: "Train Schedule"
         ) { stationName in
             Form {

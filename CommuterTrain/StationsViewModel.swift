@@ -8,7 +8,9 @@
 import Foundation
 
 class StationsViewModel: ObservableObject {
-        
+    
+    static let shared = StationsViewModel()
+    
     @Published var stations: [String] = []
     
     init() {
