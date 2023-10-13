@@ -8,35 +8,42 @@
 import SwiftUI
 
 struct TrainScheduleView: View {
-    private static let stations = [
-        "Kalideres",
-        "Pesing"
-    ]
-    
-    @State private var selectedStation = TrainScheduleView.stations[0]
     
     var body: some View {
-        NavigationStack {
-            List {
-                Section {
-                    Picker(selection: $selectedStation, label: Text("Choose Station")) {
-                        ForEach(TrainScheduleView.stations, id: \.self) { stationName in
-                            Text(stationName)
-                        }
-                    }
-                    .tint(CommuterTrainApp.accentColor)
-                    #if os(iOS)
-                    .pickerStyle(.navigationLink)
-                    #endif
-                    #if os(macOS)
-                    .pickerStyle(.menu)
-                    #endif
-                    DatePicker(selection: .constant(Date()), displayedComponents: .hourAndMinute, label: { Text("From") })
-                    DatePicker(selection: .constant(Date().addingTimeInterval(3600)), displayedComponents: .hourAndMinute, label: { Text("To") })
+        StationPickerView(
+            stationsViewModel: StationsViewModel(),
+            title: "Train Schedule"
+        ) { stationName in
+            Form {
+                LabeledContent {
+                    Text(stationName)
+                } label: {
+                    Text("Station")
                 }
+                LabeledContent {
+                    DatePicker(selection: .constant(Date()), displayedComponents: .hourAndMinute, label: { Text("From") })
+                        .labelsHidden()
+                } label: {
+                    Text("From")
+                }
+                LabeledContent {
+                    DatePicker(selection: .constant(Date().addingTimeInterval(3600)), displayedComponents: .hourAndMinute, label: { Text("To") })
+                        .labelsHidden()
+                } label: {
+                    Text("To")
+                }
+                #if os(macOS)
+                Spacer()
+                #endif
             }
             .navigationTitle("Train Schedule")
+            #if os(macOS)
+            .padding()
+            #endif
         }
+        
+        
+        
     }
 }
 

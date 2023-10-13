@@ -9,7 +9,12 @@ import SwiftUI
 
 struct FeeCalculatorView: View {
     var body: some View {
-        Text("Fee Calculator")
+        NavigationStack {
+            List {
+                
+            }
+            .navigationTitle("Tariff Calculator")
+        }
     }
 }
 

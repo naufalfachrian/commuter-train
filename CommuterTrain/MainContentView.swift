@@ -11,7 +11,7 @@ struct MainContentView: View {
     
     var body: some View {
 #if os(macOS)
-        NavigationSplitView {
+        NavigationView {
             List {
                 NavigationLink {
                     TrainPositionView()
@@ -26,16 +26,15 @@ struct MainContentView: View {
                 NavigationLink {
                     FeeCalculatorView()
                 } label: {
-                    Label("Fee Calculator", systemImage: "creditcard")
+                    Label("Tariff Calculator", systemImage: "creditcard")
                 }
                 NavigationLink {
                     RouteInformationView()
                 } label: {
                     Label("Route Information", systemImage: "map")
                 }
-            }
-        } detail: {
-            //
+            }.listStyle(SidebarListStyle())
+            ContentView()
         }
 #endif
 #if os(iOS)
