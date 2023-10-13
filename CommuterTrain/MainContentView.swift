@@ -8,53 +8,36 @@
 import SwiftUI
 
 struct MainContentView: View {
+
+    let menus: [MainMenu] = [
+        .position,
+        .schedule,
+        .tariff,
+        .route
+    ]
+    
+    @State var selectedMenu: Int = 0
     
     var body: some View {
 #if os(macOS)
         NavigationView {
-            List {
+            List(self.menus, id: \.id, selection: $selectedMenu) { menu in
                 NavigationLink {
-                    TrainPositionView()
+                    FeatureView(menu: menu)
                 } label: {
-                    Label("Train Position", systemImage: "train.side.front.car")
-                }
-                NavigationLink {
-                    TrainScheduleView()
-                } label: {
-                    Label("Train Schedule", systemImage: "timer")
-                }
-                NavigationLink {
-                    FeeCalculatorView()
-                } label: {
-                    Label("Tariff Calculator", systemImage: "creditcard")
-                }
-                NavigationLink {
-                    RouteInformationView()
-                } label: {
-                    Label("Route Information", systemImage: "map")
+                    Label(menu.longLabelText, systemImage: menu.systemImage)
                 }
             }.listStyle(SidebarListStyle())
-            ContentView()
         }
 #endif
 #if os(iOS)
         TabView {
-            TrainPositionView()
-                .tabItem {
-                    Label("Position", systemImage: "train.side.front.car")
-                }
-            TrainScheduleView()
-                .tabItem {
-                    Label("Schedule", systemImage: "timer")
-                }
-            FeeCalculatorView()
-                .tabItem {
-                    Label("Tariff", systemImage: "creditcard")
-                }
-            RouteInformationView()
-                .tabItem {
-                    Label("Route", systemImage: "map")
-                }
+            ForEach(self.menus, id: \.id) { menu in
+                FeatureView(menu: menu)
+                    .tabItem {
+                        Label(menu.shortLabelText, systemImage: menu.systemImage)
+                    }
+            }
         }
 #endif
     }

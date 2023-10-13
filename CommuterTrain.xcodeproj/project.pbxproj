@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EA4CE4482AD8EA4700D634DF /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4CE4472AD8EA4700D634DF /* StationsViewModel.swift */; };
 		EA4CE44C2AD918F900D634DF /* StationPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4CE44B2AD918F900D634DF /* StationPickerView.swift */; };
+		EA4CE44E2AD9406D00D634DF /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4CE44D2AD9406D00D634DF /* FeatureView.swift */; };
+		EA4CE4502AD9410000D634DF /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4CE44F2AD9410000D634DF /* MainMenu.swift */; };
 		EAB578102AD7D436000D30AD /* CommuterTrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5780F2AD7D436000D30AD /* CommuterTrainApp.swift */; };
 		EAB578122AD7D436000D30AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578112AD7D436000D30AD /* Persistence.swift */; };
 		EAB578152AD7D436000D30AD /* CommuterTrain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB578132AD7D436000D30AD /* CommuterTrain.xcdatamodeld */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		EA4CE4472AD8EA4700D634DF /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
 		EA4CE44B2AD918F900D634DF /* StationPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationPickerView.swift; sourceTree = "<group>"; };
+		EA4CE44D2AD9406D00D634DF /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
+		EA4CE44F2AD9410000D634DF /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		EAB5780C2AD7D436000D30AD /* CommuterTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommuterTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB5780F2AD7D436000D30AD /* CommuterTrainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuterTrainApp.swift; sourceTree = "<group>"; };
 		EAB578112AD7D436000D30AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 				EAB578492AD7E24E000D30AD /* CommuterLine.swift */,
 				EA4CE4472AD8EA4700D634DF /* StationsViewModel.swift */,
 				EA4CE44B2AD918F900D634DF /* StationPickerView.swift */,
+				EA4CE44D2AD9406D00D634DF /* FeatureView.swift */,
+				EA4CE44F2AD9410000D634DF /* MainMenu.swift */,
 			);
 			path = CommuterTrain;
 			sourceTree = "<group>";
@@ -293,10 +299,12 @@
 				EAB578152AD7D436000D30AD /* CommuterTrain.xcdatamodeld in Sources */,
 				EAB578172AD7D436000D30AD /* ContentView.swift in Sources */,
 				EAB578482AD7DA48000D30AD /* RouteInformationView.swift in Sources */,
+				EA4CE44E2AD9406D00D634DF /* FeatureView.swift in Sources */,
 				EAB578122AD7D436000D30AD /* Persistence.swift in Sources */,
 				EAB578442AD7D91E000D30AD /* TrainScheduleView.swift in Sources */,
 				EAB578422AD7D8B5000D30AD /* TrainPositionView.swift in Sources */,
 				EAB5784A2AD7E24E000D30AD /* CommuterLine.swift in Sources */,
+				EA4CE4502AD9410000D634DF /* MainMenu.swift in Sources */,
 				EA4CE4482AD8EA4700D634DF /* StationsViewModel.swift in Sources */,
 				EA4CE44C2AD918F900D634DF /* StationPickerView.swift in Sources */,
 				EAB578402AD7D62D000D30AD /* MainContentView.swift in Sources */,
