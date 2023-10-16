@@ -113,9 +113,9 @@ struct Migrator {
             station.name = stationName
         }
         saveToPersistent()
-        // Transport Lines
-        let lines: [TransportLineMigratorEntity] = [
-            TransportLineMigratorEntity(
+        // Lines
+        let lines: [LineEntity] = [
+            LineEntity(
                 name: "Tangerang Line",
                 imageName: "lines_tangerang",
                 stationsName: [
@@ -132,7 +132,7 @@ struct Migrator {
                     "Tangerang",
                 ]
             ),
-            TransportLineMigratorEntity(
+            LineEntity(
                 name: "Cikarang Loop Line",
                 imageName: "lines_cikarang",
                 stationsName: [
@@ -165,7 +165,7 @@ struct Migrator {
                     "Cikarang",
                 ]
             ),
-            TransportLineMigratorEntity(
+            LineEntity(
                 name: "Bogor Line",
                 imageName: "lines_bogor",
                 stationsName: [
@@ -197,7 +197,7 @@ struct Migrator {
                     "Nambo",
                 ]
             ),
-            TransportLineMigratorEntity(
+            LineEntity(
                 name: "Rangkasbitung Line",
                 imageName: "lines_rangkasbitung",
                 stationsName: [
@@ -222,7 +222,7 @@ struct Migrator {
                     "Rangkasbitung",
                 ]
             ),
-            TransportLineMigratorEntity(
+            LineEntity(
                 name: "Tanjung Priok Line",
                 imageName: "lines_tanjungpriok",
                 stationsName: [
@@ -235,14 +235,14 @@ struct Migrator {
         ]
         let stations = try container.viewContext.fetch(Station.fetchRequest())
         lines.forEach { tlme in
-            let transportLine = TransportLine(context: container.viewContext)
-            transportLine.imageName = tlme.imageName
-            transportLine.name = tlme.name
+            let line = Line(context: container.viewContext)
+            line.imageName = tlme.imageName
+            line.name = tlme.name
             stations.forEach { station in
                 if tlme.stationsName.contains(where: { stName in
                     stName == station.name
                 }) {
-                    station.addToTransportLines(transportLine)
+                    station.addToLines(line)
                 }
             }
         }

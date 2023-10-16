@@ -14,7 +14,7 @@ struct StationItemView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(station.name!)
-            TransportLineView(transportLines: station.transportLines!.compactMap { $0 as? TransportLine })
+            LineView(lines: station.lines!.compactMap { $0 as? Line })
         }
     }
     

@@ -15,7 +15,7 @@ struct TrainPositionView: View {
         ) { station in
             ScrollView(content: {
                 VStack(alignment: .leading, spacing: 4.0) {
-                    TransportLineView(size: 24.0, spacing: 6.0, transportLines: station.transportLines!.compactMap { $0 as? TransportLine })
+                    LineView(size: 24.0, spacing: 6.0, lines: station.lines!.compactMap { $0 as? Line })
                         .padding([.top, .leading])
                     Spacer()
                 }

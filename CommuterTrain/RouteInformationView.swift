@@ -14,20 +14,20 @@ struct RouteInformationView: View {
     
     @State var sideBarVisibility: NavigationSplitViewVisibility = .all
     
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \TransportLine.name, ascending: true)], animation: .default)
-    private var transportLines: FetchedResults<TransportLine>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Line.name, ascending: true)], animation: .default)
+    private var lines: FetchedResults<Line>
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(transportLines) { transportLine in
+                ForEach(lines) { line in
                     NavigationLink {
-                        Text(transportLine.name!)
-                            .navigationTitle(transportLine.name!)
+                        Text(line.name!)
+                            .navigationTitle(line.name!)
                     } label: {
                         HStack {
-                            Image(transportLine.imageName!)
-                            Text(transportLine.name!)
+                            Image(line.imageName!)
+                            Text(line.name!)
                         }
                     }
                 }

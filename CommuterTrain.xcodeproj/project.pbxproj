@@ -11,13 +11,12 @@
 		EA4CE44E2AD9406D00D634DF /* FeatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4CE44D2AD9406D00D634DF /* FeatureView.swift */; };
 		EA4CE4502AD9410000D634DF /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4CE44F2AD9410000D634DF /* MainMenu.swift */; };
 		EA82FD4F2ADCE8D8003F8153 /* Migrator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82FD4E2ADCE8D8003F8153 /* Migrator.swift */; };
-		EA82FD532ADCEBDB003F8153 /* TransportLineMigratorEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82FD522ADCEBDB003F8153 /* TransportLineMigratorEntity.swift */; };
+		EA82FD532ADCEBDB003F8153 /* LineEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82FD522ADCEBDB003F8153 /* LineEntity.swift */; };
 		EA82FD552ADCFACB003F8153 /* StationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82FD542ADCFACB003F8153 /* StationItemView.swift */; };
-		EA82FD572ADCFBAE003F8153 /* TransportLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82FD562ADCFBAE003F8153 /* TransportLineView.swift */; };
+		EA82FD572ADCFBAE003F8153 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA82FD562ADCFBAE003F8153 /* LineView.swift */; };
 		EAB578102AD7D436000D30AD /* CommuterTrainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB5780F2AD7D436000D30AD /* CommuterTrainApp.swift */; };
 		EAB578122AD7D436000D30AD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578112AD7D436000D30AD /* Persistence.swift */; };
 		EAB578152AD7D436000D30AD /* CommuterTrain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EAB578132AD7D436000D30AD /* CommuterTrain.xcdatamodeld */; };
-		EAB578172AD7D436000D30AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578162AD7D436000D30AD /* ContentView.swift */; };
 		EAB578192AD7D439000D30AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB578182AD7D439000D30AD /* Assets.xcassets */; };
 		EAB5781D2AD7D439000D30AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAB5781C2AD7D439000D30AD /* Preview Assets.xcassets */; };
 		EAB578272AD7D43A000D30AD /* CommuterTrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB578262AD7D43A000D30AD /* CommuterTrainTests.swift */; };
@@ -52,14 +51,13 @@
 		EA4CE44D2AD9406D00D634DF /* FeatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureView.swift; sourceTree = "<group>"; };
 		EA4CE44F2AD9410000D634DF /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		EA82FD4E2ADCE8D8003F8153 /* Migrator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Migrator.swift; sourceTree = "<group>"; };
-		EA82FD522ADCEBDB003F8153 /* TransportLineMigratorEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportLineMigratorEntity.swift; sourceTree = "<group>"; };
+		EA82FD522ADCEBDB003F8153 /* LineEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineEntity.swift; sourceTree = "<group>"; };
 		EA82FD542ADCFACB003F8153 /* StationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationItemView.swift; sourceTree = "<group>"; };
-		EA82FD562ADCFBAE003F8153 /* TransportLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportLineView.swift; sourceTree = "<group>"; };
+		EA82FD562ADCFBAE003F8153 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		EAB5780C2AD7D436000D30AD /* CommuterTrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommuterTrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB5780F2AD7D436000D30AD /* CommuterTrainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommuterTrainApp.swift; sourceTree = "<group>"; };
 		EAB578112AD7D436000D30AD /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		EAB578142AD7D436000D30AD /* CommuterTrain.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CommuterTrain.xcdatamodel; sourceTree = "<group>"; };
-		EAB578162AD7D436000D30AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EAB578182AD7D439000D30AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAB5781A2AD7D439000D30AD /* CommuterTrain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CommuterTrain.entitlements; sourceTree = "<group>"; };
 		EAB5781C2AD7D439000D30AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -112,7 +110,7 @@
 		EA82FD512ADCEBBF003F8153 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				EA82FD522ADCEBDB003F8153 /* TransportLineMigratorEntity.swift */,
+				EA82FD522ADCEBDB003F8153 /* LineEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -143,7 +141,6 @@
 				EA82FD502ADCEBA7003F8153 /* Migrator */,
 				EAB5780F2AD7D436000D30AD /* CommuterTrainApp.swift */,
 				EAB578112AD7D436000D30AD /* Persistence.swift */,
-				EAB578162AD7D436000D30AD /* ContentView.swift */,
 				EAB578182AD7D439000D30AD /* Assets.xcassets */,
 				EAB5781A2AD7D439000D30AD /* CommuterTrain.entitlements */,
 				EAB578132AD7D436000D30AD /* CommuterTrain.xcdatamodeld */,
@@ -157,7 +154,7 @@
 				EA4CE44D2AD9406D00D634DF /* FeatureView.swift */,
 				EA4CE44F2AD9410000D634DF /* MainMenu.swift */,
 				EA82FD542ADCFACB003F8153 /* StationItemView.swift */,
-				EA82FD562ADCFBAE003F8153 /* TransportLineView.swift */,
+				EA82FD562ADCFBAE003F8153 /* LineView.swift */,
 			);
 			path = CommuterTrain;
 			sourceTree = "<group>";
@@ -319,15 +316,14 @@
 			files = (
 				EAB578102AD7D436000D30AD /* CommuterTrainApp.swift in Sources */,
 				EAB578152AD7D436000D30AD /* CommuterTrain.xcdatamodeld in Sources */,
-				EAB578172AD7D436000D30AD /* ContentView.swift in Sources */,
 				EAB578482AD7DA48000D30AD /* RouteInformationView.swift in Sources */,
-				EA82FD572ADCFBAE003F8153 /* TransportLineView.swift in Sources */,
+				EA82FD572ADCFBAE003F8153 /* LineView.swift in Sources */,
 				EA4CE44E2AD9406D00D634DF /* FeatureView.swift in Sources */,
 				EAB578122AD7D436000D30AD /* Persistence.swift in Sources */,
 				EAB578442AD7D91E000D30AD /* TrainScheduleView.swift in Sources */,
 				EAB578422AD7D8B5000D30AD /* TrainPositionView.swift in Sources */,
 				EA82FD4F2ADCE8D8003F8153 /* Migrator.swift in Sources */,
-				EA82FD532ADCEBDB003F8153 /* TransportLineMigratorEntity.swift in Sources */,
+				EA82FD532ADCEBDB003F8153 /* LineEntity.swift in Sources */,
 				EA4CE4502AD9410000D634DF /* MainMenu.swift in Sources */,
 				EA4CE44C2AD918F900D634DF /* StationPickerView.swift in Sources */,
 				EAB578402AD7D62D000D30AD /* MainContentView.swift in Sources */,
