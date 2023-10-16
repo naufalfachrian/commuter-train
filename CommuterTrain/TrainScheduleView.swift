@@ -12,10 +12,10 @@ struct TrainScheduleView: View {
     var body: some View {
         StationPickerView(
             title: "Train Schedule"
-        ) { stationName in
+        ) { station in
             Form {
                 LabeledContent {
-                    Text(stationName)
+                    Text(station.name!)
                 } label: {
                     Text("Station")
                 }

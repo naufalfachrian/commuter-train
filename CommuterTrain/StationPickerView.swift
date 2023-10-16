@@ -16,14 +16,14 @@ struct StationPickerView<Content>: View where Content: View {
     
     let title: String
     
-    let navigation: (String) -> Content
+    let navigation: (Station) -> Content
     
     var body: some View {
         NavigationSplitView {
             List {
                 ForEach(searchResults, id: \.self) { station in
                     NavigationLink {
-                        navigation(station.name!)
+                        navigation(station)
                     } label: {
                         StationItemView(station: station)
                     }

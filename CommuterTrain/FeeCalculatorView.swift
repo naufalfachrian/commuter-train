@@ -14,8 +14,8 @@ struct FeeCalculatorView: View {
     
     var body: some View {
         StationPickerView(
-            title: "Tariff Calculator") { stationName in
-                Text(stationName)
+            title: "Tariff Calculator") { station in
+                Text(station.name!)
             }
     }
     
