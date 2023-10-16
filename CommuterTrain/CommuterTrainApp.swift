@@ -17,6 +17,7 @@ struct CommuterTrainApp: App {
         WindowGroup {
             MainContentView()
                 .accentColor(CommuterTrainApp.accentColor)
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

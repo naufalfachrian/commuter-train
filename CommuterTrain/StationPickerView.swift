@@ -9,7 +9,8 @@ import SwiftUI
 
 struct StationPickerView<Content>: View where Content: View {
     
-    @ObservedObject var stationsViewModel: StationsViewModel
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \Station.name, ascending: true)], animation: .default)
+    private var stations: FetchedResults<Station>
     
     @State private var searchText = ""
     
@@ -22,11 +23,10 @@ struct StationPickerView<Content>: View where Content: View {
             List {
                 ForEach(searchResults, id: \.self) { station in
                     NavigationLink {
-                        navigation(station)
+                        navigation(station.name!)
                     } label: {
-                        Text(station)
+                        StationItemView(station: station)
                     }
-
                 }
             }
             .navigationTitle(title)
@@ -43,12 +43,12 @@ struct StationPickerView<Content>: View where Content: View {
         #endif
     }
     
-    var searchResults: [String] {
+    var searchResults: [Station] {
         if searchText.isEmpty {
-            return stationsViewModel.stations
+            return stations.compactMap{ $0 }
         } else {
-            return stationsViewModel.stations.filter {
-                $0.lowercased().contains(searchText.lowercased())
+            return stations.filter {
+                $0.name!.lowercased().contains(searchText.lowercased())
             }
         }
     }

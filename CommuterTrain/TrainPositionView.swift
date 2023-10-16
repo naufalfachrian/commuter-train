@@ -11,7 +11,6 @@ struct TrainPositionView: View {
     
     var body: some View {
         StationPickerView(
-            stationsViewModel: StationsViewModel.shared,
             title: "Train Position"
         ) { stationName in
             Text(stationName)
@@ -22,5 +21,6 @@ struct TrainPositionView: View {
 struct TrainPositionView_Previews: PreviewProvider {
     static var previews: some View {
         TrainPositionView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

@@ -11,7 +11,6 @@ struct TrainScheduleView: View {
     
     var body: some View {
         StationPickerView(
-            stationsViewModel: StationsViewModel.shared,
             title: "Train Schedule"
         ) { stationName in
             Form {
@@ -50,5 +49,6 @@ struct TrainScheduleView: View {
 struct TrainScheduleView_Previews: PreviewProvider {
     static var previews: some View {
         TrainScheduleView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

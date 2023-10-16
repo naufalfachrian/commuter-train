@@ -51,6 +51,13 @@ struct PersistenceController {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
+        let migrator = Migrator(container: container)
+        do {
+            try migrator.migrate()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 }

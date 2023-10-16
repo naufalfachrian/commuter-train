@@ -9,9 +9,11 @@ import SwiftUI
 
 struct FeeCalculatorView: View {
     
+    @Environment(\.managedObjectContext)
+    private var viewContext
+    
     var body: some View {
         StationPickerView(
-            stationsViewModel: StationsViewModel.shared,
             title: "Tariff Calculator") { stationName in
                 Text(stationName)
             }
@@ -22,5 +24,6 @@ struct FeeCalculatorView: View {
 struct FeeCalculationView_Previews: PreviewProvider {
     static var previews: some View {
         FeeCalculatorView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

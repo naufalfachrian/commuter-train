@@ -8,25 +8,28 @@
 import SwiftUI
 
 struct RouteInformationView: View {
+    
+    @Environment(\.managedObjectContext)
+    private var viewContext
+    
     @State var sideBarVisibility: NavigationSplitViewVisibility = .all
     
-    let commuterLines: [CommuterLine] = [
-        CommuterLine(color: .blue, name: "Cikarang Line"),
-        CommuterLine(color: .red, name: "Bogor Line"),
-        CommuterLine(color: .pink, name: "Tanjungpriok Line"),
-        CommuterLine(color: .green, name: "Rangkasbitung Line"),
-        CommuterLine(color: .orange, name: "Tangerang Line"),
-        CommuterLine(color: .red, name: "Yogyakarta Line")
-    ]
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \TransportLine.name, ascending: true)], animation: .default)
+    private var transportLines: FetchedResults<TransportLine>
     
     var body: some View {
         NavigationStack {
-            List(self.commuterLines) { line in
-                NavigationLink {
-                    Text(line.name).foregroundColor(line.color)
-                        .navigationTitle(line.name)
-                } label: {
-                    Text(line.name).foregroundColor(line.color)
+            List {
+                ForEach(transportLines) { transportLine in
+                    NavigationLink {
+                        Text(transportLine.name!)
+                            .navigationTitle(transportLine.name!)
+                    } label: {
+                        HStack {
+                            Image(transportLine.imageName!)
+                            Text(transportLine.name!)
+                        }
+                    }
                 }
             }
             .navigationTitle("Route Information")
@@ -37,5 +40,6 @@ struct RouteInformationView: View {
 struct RouteInformationView_Previews: PreviewProvider {
     static var previews: some View {
         RouteInformationView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

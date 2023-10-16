@@ -15,12 +15,16 @@ struct FeatureView: View {
         switch menu {
         case .position:
             TrainPositionView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         case .schedule:
             TrainScheduleView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         case .tariff:
             FeeCalculatorView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         case .route:
             RouteInformationView()
+                .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
         }
     }
     

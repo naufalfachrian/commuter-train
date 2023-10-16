@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct MainContentView: View {
+    
+    @Environment(\.managedObjectContext)
+    private var viewContext
 
     let menus: [MainMenu] = [
         .position,
